@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190529 22:27:47.603" rpa="false">
+<suite id="s1" name="Test" source="C:\Users\Joshua\Josh\robot_test\tests\test.robot">
+<kw name="Open Home Page" type="setup">
+<tags>
+<tag>Open Home Page</tag>
+</tags>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://dmca-edu-ph.herokuapp.com</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20190529 22:27:47.814" level="INFO">Opening browser 'ff' to base url 'https://dmca-edu-ph.herokuapp.com'.</msg>
+<status status="PASS" starttime="20190529 22:27:47.814" endtime="20190529 22:28:36.401"></status>
+</kw>
+<status status="PASS" starttime="20190529 22:27:47.814" endtime="20190529 22:28:36.401"></status>
+</kw>
+<test id="s1-t1" name="Test Valid Login">
+<kw name="Submit Valid Credentials">
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/account/login/</arg>
+</arguments>
+<msg timestamp="20190529 22:28:36.403" level="INFO">Clicking link '/account/login/'.</msg>
+<status status="PASS" starttime="20190529 22:28:36.402" endtime="20190529 22:28:44.532"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20190529 22:28:44.532" level="INFO">Typing text 'joshuakimrivera@gmail.com' into text field 'username'.</msg>
+<status status="PASS" starttime="20190529 22:28:44.532" endtime="20190529 22:28:44.596"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190529 22:28:44.597" level="INFO">Typing password into text field 'password'.</msg>
+<status status="PASS" starttime="20190529 22:28:44.596" endtime="20190529 22:28:44.628"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>loginButton</arg>
+</arguments>
+<msg timestamp="20190529 22:28:44.629" level="INFO">Clicking element 'loginButton'.</msg>
+<status status="PASS" starttime="20190529 22:28:44.629" endtime="20190529 22:29:06.172"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>DMCA SIS</arg>
+</arguments>
+<msg timestamp="20190529 22:29:06.185" level="INFO">Current page contains text 'DMCA SIS'.</msg>
+<status status="PASS" starttime="20190529 22:29:06.172" endtime="20190529 22:29:06.185"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/account/view/edit/profile/</arg>
+</arguments>
+<msg timestamp="20190529 22:29:06.186" level="INFO">Clicking link '/account/view/edit/profile/'.</msg>
+<status status="PASS" starttime="20190529 22:29:06.185" endtime="20190529 22:29:06.428"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>/account/logout/</arg>
+</arguments>
+<msg timestamp="20190529 22:29:06.429" level="INFO">Clicking link '/account/logout/'.</msg>
+<status status="PASS" starttime="20190529 22:29:06.428" endtime="20190529 22:30:02.179"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20190529 22:30:02.183" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20190529 22:30:02.180" endtime="20190529 22:30:02.183"></status>
+</kw>
+<status status="PASS" starttime="20190529 22:28:36.402" endtime="20190529 22:30:02.183"></status>
+</kw>
+<status status="PASS" starttime="20190529 22:28:36.401" endtime="20190529 22:30:02.184" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Test Invalid Login">
+<kw name="Submit Invalid Credentials">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>wrongemail@email.com</arg>
+</arguments>
+<msg timestamp="20190529 22:30:02.187" level="INFO">Typing text 'wrongemail@email.com' into text field 'username'.</msg>
+<status status="PASS" starttime="20190529 22:30:02.187" endtime="20190529 22:30:02.254"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>wrongpassword</arg>
+</arguments>
+<msg timestamp="20190529 22:30:02.254" level="INFO">Typing password into text field 'password'.</msg>
+<status status="PASS" starttime="20190529 22:30:02.254" endtime="20190529 22:30:02.283"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>loginButton</arg>
+</arguments>
+<msg timestamp="20190529 22:30:02.283" level="INFO">Clicking element 'loginButton'.</msg>
+<status status="PASS" starttime="20190529 22:30:02.283" endtime="20190529 22:30:10.090"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<msg timestamp="20190529 22:30:10.104" level="INFO">Page title is 'Login'.</msg>
+<status status="PASS" starttime="20190529 22:30:10.091" endtime="20190529 22:30:10.104"></status>
+</kw>
+<status status="PASS" starttime="20190529 22:30:02.187" endtime="20190529 22:30:10.104"></status>
+</kw>
+<status status="PASS" starttime="20190529 22:30:02.186" endtime="20190529 22:30:10.105" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20190529 22:30:10.107" endtime="20190529 22:30:12.700"></status>
+</kw>
+<doc>Running Test on https://dmca-edu-ph.herokuapp.com</doc>
+<status status="PASS" starttime="20190529 22:27:47.605" endtime="20190529 22:30:12.700"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="Test">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
