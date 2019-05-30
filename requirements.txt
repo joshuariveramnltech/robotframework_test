@@ -1,15 +1,10 @@
 #Common library
-jsonpath==0.75
-paramiko==2.2.1
-requests==2.13.0
-robotframework==3.0.2
-robotframework-selenium2library==1.8.0
-robotframework-sshlibrary==2.1.3
-selenium==3.12.0
-psutil==5.4.3
-locustio==0.7.5
-
-#Triggering Engine library
-robotframework-databaselibrary==1.0.1
-psycopg2==2.6.2
-stomp.py==4.1.19
+jsonpath
+paramiko
+requests
+robotframework
+robotframework-selenium2library
+robotframework-sshlibrary
+selenium
+psutil
+locustio
