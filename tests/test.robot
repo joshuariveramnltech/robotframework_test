@@ -17,8 +17,8 @@ Open Home Page
     Open Browser    https://dmca-edu-ph.herokuapp.com  ff
 
 
-Visit yts
-    title should be                     DMCA | Home
+Visit homepage
+    title should be                     WIN88
 
 
 Submit Valid Credentials
@@ -42,6 +42,8 @@ Submit Invalid Credentials
 
 
 *** Test Cases ***
+Visit landing
+    Visit homepage
 Test Valid Login
     Submit Valid Credentials
 
