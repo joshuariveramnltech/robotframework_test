@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.6.7 on linux)" generated="20190530 18:55:26.662" rpa="false">
-<suite id="s1" name="Yts" source="/home/joshuarivera/robotframework_test/tests/yts.robot">
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190530 22:22:14.271" rpa="false">
+<suite id="s1" name="Yts" source="C:\Users\Joshua\Josh\robot_test\tests\yts.robot">
 <kw name="Open Home Page" type="setup">
 <tags>
 <tag>Open Home Page</tag>
@@ -8,40 +8,42 @@
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>https://www.thwin88.com/</arg>
+<arg>http://testing.todvachev.com/</arg>
 <arg>ff</arg>
 </arguments>
-<msg timestamp="20190530 18:55:26.814" level="INFO">Opening browser 'ff' to base url 'https://www.thwin88.com/'.</msg>
-<status status="PASS" starttime="20190530 18:55:26.814" endtime="20190530 18:55:33.657"></status>
+<msg timestamp="20190530 22:22:14.615" level="INFO">Opening browser 'ff' to base url 'http://testing.todvachev.com/'.</msg>
+<status status="PASS" starttime="20190530 22:22:14.615" endtime="20190530 22:23:12.260"></status>
 </kw>
-<status status="PASS" starttime="20190530 18:55:26.814" endtime="20190530 18:55:33.658"></status>
+<status status="PASS" starttime="20190530 22:22:14.615" endtime="20190530 22:23:12.260"></status>
 </kw>
 <test id="s1-t1" name="Check Login">
 <kw name="Submit Valid Credentials">
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>href='/login'</arg>
+<arg>//*[@id="menu-item-35"]/a</arg>
 </arguments>
-<msg timestamp="20190530 18:55:33.662" level="INFO">Clicking link 'href='/login''.</msg>
+<msg timestamp="20190530 22:23:12.267" level="INFO">Clicking link '//*[@id="menu-item-35"]/a'.</msg>
 <kw name="Capture Page Screenshot" library="Selenium2Library">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190530 18:55:33.752" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20190530 18:55:33.683" endtime="20190530 18:55:33.752"></status>
+<msg timestamp="20190530 22:24:38.457" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190530 22:24:38.333" endtime="20190530 22:24:38.458"></status>
 </kw>
-<msg timestamp="20190530 18:55:33.753" level="FAIL">Link with locator 'href='/login'' not found.</msg>
-<status status="FAIL" starttime="20190530 18:55:33.662" endtime="20190530 18:55:33.753"></status>
+<msg timestamp="20190530 22:24:38.463" level="FAIL">WebDriverException: Message: Reached error page: about:neterror?e=netReset&amp;u=http%3A//testing.todvachev.com/category/special-elements/&amp;c=UTF-8&amp;f=regular&amp;d=The%20connection%20to%20the%20server%20was%20reset%20while%20the%20page%20was%20loading.
+</msg>
+<status status="FAIL" starttime="20190530 22:23:12.266" endtime="20190530 22:24:38.463"></status>
 </kw>
-<status status="FAIL" starttime="20190530 18:55:33.661" endtime="20190530 18:55:33.754"></status>
+<status status="FAIL" starttime="20190530 22:23:12.265" endtime="20190530 22:24:38.463"></status>
 </kw>
-<status status="FAIL" starttime="20190530 18:55:33.658" endtime="20190530 18:55:33.754" critical="yes">Link with locator 'href='/login'' not found.</status>
+<status status="FAIL" starttime="20190530 22:23:12.261" endtime="20190530 22:24:38.463" critical="yes">WebDriverException: Message: Reached error page: about:neterror?e=netReset&amp;u=http%3A//testing.todvachev.com/category/special-elements/&amp;c=UTF-8&amp;f=regular&amp;d=The%20connection%20to%20the%20server%20was%20reset%20while%20the%20page%20was%20loading.
+</status>
 </test>
 <kw name="Close All Browsers" library="Selenium2Library" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20190530 18:55:33.755" endtime="20190530 18:55:35.130"></status>
+<status status="PASS" starttime="20190530 22:24:38.471" endtime="20190530 22:24:40.241"></status>
 </kw>
-<doc>Running Test on https://www.thwin88.com/</doc>
-<status status="FAIL" starttime="20190530 18:55:26.664" endtime="20190530 18:55:35.130"></status>
+<doc>Running Test on http://testing.todvachev.com/</doc>
+<status status="FAIL" starttime="20190530 22:22:14.273" endtime="20190530 22:24:40.241"></status>
 </suite>
 <statistics>
 <total>
