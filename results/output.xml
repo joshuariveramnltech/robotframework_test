@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20190530 22:22:14.271" rpa="false">
-<suite id="s1" name="Yts" source="C:\Users\Joshua\Josh\robot_test\tests\yts.robot">
+<robot generator="Robot 3.1.2 (Python 3.6.7 on linux)" generated="20190531 12:12:57.336" rpa="false">
+<suite id="s1" name="Yts" source="/home/joshuarivera/robotframework_test/tests/yts.robot">
 <kw name="Open Home Page" type="setup">
 <tags>
 <tag>Open Home Page</tag>
@@ -8,52 +8,116 @@
 <kw name="Open Browser" library="Selenium2Library">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>http://testing.todvachev.com/</arg>
-<arg>ff</arg>
+<arg>https://www.vn88uat.com</arg>
+<arg>chrome</arg>
 </arguments>
-<msg timestamp="20190530 22:22:14.615" level="INFO">Opening browser 'ff' to base url 'http://testing.todvachev.com/'.</msg>
-<status status="PASS" starttime="20190530 22:22:14.615" endtime="20190530 22:23:12.260"></status>
+<msg timestamp="20190531 12:12:57.444" level="INFO">Opening browser 'chrome' to base url 'https://www.vn88uat.com'.</msg>
+<status status="PASS" starttime="20190531 12:12:57.444" endtime="20190531 12:13:00.299"></status>
 </kw>
-<status status="PASS" starttime="20190530 22:22:14.615" endtime="20190530 22:23:12.260"></status>
+<status status="PASS" starttime="20190531 12:12:57.443" endtime="20190531 12:13:00.299"></status>
 </kw>
-<test id="s1-t1" name="Check Login">
+<test id="s1-t1" name="Load Page">
+<kw name="Buffer Page">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>username</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190531 12:13:08.632" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-116.png"&gt;&lt;img src="selenium-screenshot-116.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190531 12:13:05.313" endtime="20190531 12:13:08.632"></status>
+</kw>
+<msg timestamp="20190531 12:13:08.635" level="FAIL">Element 'username' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20190531 12:13:00.300" endtime="20190531 12:13:08.636"></status>
+</kw>
+<status status="FAIL" starttime="20190531 12:13:00.300" endtime="20190531 12:13:08.636"></status>
+</kw>
+<status status="FAIL" starttime="20190531 12:13:00.299" endtime="20190531 12:13:08.637" critical="yes">Element 'username' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t2" name="Check Login">
 <kw name="Submit Valid Credentials">
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20190531 12:13:08.645" level="INFO">Typing text 'cmsqaJKR' into text field 'username'.</msg>
+<status status="PASS" starttime="20190531 12:13:08.644" endtime="20190531 12:13:08.734"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190531 12:13:08.734" level="INFO">Typing password into text field 'password'.</msg>
+<status status="PASS" starttime="20190531 12:13:08.734" endtime="20190531 12:13:08.817"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="header"]/section[1]/div/ul/div[1]/div[2]/form/div[3]/button</arg>
+</arguments>
+<msg timestamp="20190531 12:13:08.817" level="INFO">Clicking button '//*[@id="header"]/section[1]/div/ul/div[1]/div[2]/form/div[3]/button'.</msg>
+<status status="PASS" starttime="20190531 12:13:08.817" endtime="20190531 12:13:08.896"></status>
+</kw>
+<status status="PASS" starttime="20190531 12:13:08.643" endtime="20190531 12:13:08.897"></status>
+</kw>
+<status status="PASS" starttime="20190531 12:13:08.641" endtime="20190531 12:13:08.897" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Check succesful login redirect">
+<kw name="Wait success login">
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<status status="PASS" starttime="20190531 12:13:08.899" endtime="20190531 12:13:10.870"></status>
+</kw>
 <kw name="Click Link" library="Selenium2Library">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>//*[@id="menu-item-35"]/a</arg>
+<arg>/logout</arg>
 </arguments>
-<msg timestamp="20190530 22:23:12.267" level="INFO">Clicking link '//*[@id="menu-item-35"]/a'.</msg>
-<kw name="Capture Page Screenshot" library="Selenium2Library">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190530 22:24:38.457" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20190530 22:24:38.333" endtime="20190530 22:24:38.458"></status>
+<msg timestamp="20190531 12:13:10.870" level="INFO">Clicking link '/logout'.</msg>
+<status status="PASS" starttime="20190531 12:13:10.870" endtime="20190531 12:13:12.307"></status>
 </kw>
-<msg timestamp="20190530 22:24:38.463" level="FAIL">WebDriverException: Message: Reached error page: about:neterror?e=netReset&amp;u=http%3A//testing.todvachev.com/category/special-elements/&amp;c=UTF-8&amp;f=regular&amp;d=The%20connection%20to%20the%20server%20was%20reset%20while%20the%20page%20was%20loading.
-</msg>
-<status status="FAIL" starttime="20190530 22:23:12.266" endtime="20190530 22:24:38.463"></status>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>username</arg>
+</arguments>
+<status status="PASS" starttime="20190531 12:13:12.307" endtime="20190531 12:13:12.316"></status>
 </kw>
-<status status="FAIL" starttime="20190530 22:23:12.265" endtime="20190530 22:24:38.463"></status>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>password</arg>
+</arguments>
+<status status="PASS" starttime="20190531 12:13:12.316" endtime="20190531 12:13:12.324"></status>
 </kw>
-<status status="FAIL" starttime="20190530 22:23:12.261" endtime="20190530 22:24:38.463" critical="yes">WebDriverException: Message: Reached error page: about:neterror?e=netReset&amp;u=http%3A//testing.todvachev.com/category/special-elements/&amp;c=UTF-8&amp;f=regular&amp;d=The%20connection%20to%20the%20server%20was%20reset%20while%20the%20page%20was%20loading.
-</status>
+<status status="PASS" starttime="20190531 12:13:08.899" endtime="20190531 12:13:12.324"></status>
+</kw>
+<status status="PASS" starttime="20190531 12:13:08.898" endtime="20190531 12:13:12.324" critical="yes"></status>
 </test>
 <kw name="Close All Browsers" library="Selenium2Library" type="teardown">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20190530 22:24:38.471" endtime="20190530 22:24:40.241"></status>
+<status status="PASS" starttime="20190531 12:13:12.325" endtime="20190531 12:13:12.396"></status>
 </kw>
-<doc>Running Test on http://testing.todvachev.com/</doc>
-<status status="FAIL" starttime="20190530 22:22:14.273" endtime="20190530 22:24:40.241"></status>
+<doc>Running Test on https://www.vn88uat.com</doc>
+<status status="FAIL" starttime="20190531 12:12:57.337" endtime="20190531 12:13:12.396"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1">Critical Tests</stat>
-<stat pass="0" fail="1">All Tests</stat>
+<stat pass="2" fail="1">Critical Tests</stat>
+<stat pass="2" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" id="s1" name="Yts">Yts</stat>
+<stat pass="2" fail="1" id="s1" name="Yts">Yts</stat>
 </suite>
 </statistics>
 <errors>
