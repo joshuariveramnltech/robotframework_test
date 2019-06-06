@@ -1,18 +1,4 @@
-*** Setting ***
-Documentation                                           Running Test on VN88.com
-Library                                                 Selenium2Library
-Resource                                                ../resources/resource.txt
-
-Suite Setup                                             Open Home Page
-Suite Teardown                                          Close All Browsers
-
-
-*** Variables ***
-
-
-
-*** Keywords ***
-
+***Keywords***
 Open Home Page
     [Tags]  Open Home Page
     Open Browser                                        ${website_url}      ${test_browser}
@@ -65,27 +51,3 @@ Execute Game Test
 Execute User Log-out
     click link                                          /logout
     wait until page contains element                    username
-
-    
-
-*** Test Cases ***
-
-Load Page
-    Maximize Browser Window
-    Buffer Page
-
-Check Login
-    Submit Valid Credentials
-
-Check succesful login redirect
-    Wait success login
-
-Check Slots Page
-    Check Slots GP
-    Check Slots Page
-    Execute Game Test
-    Log to console                                      ${success_message}
-
-Check Successful logout
-    Execute User Log-out
-

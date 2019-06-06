@@ -19,7 +19,7 @@
 ---
 
 ### Using `pip`, install the following dependencies
-#### Install the dependencies with this command, Linux:`pip3 install -r requirements.txt` , Windows: `pip install -r requirements.txt`.
+#### Install the dependencies with this command, Linux:`pip3 install *packagename*` , Windows: `pip install *packagename*`.
 #### Below are the dependencies to be installed.
 * jsonpath
 * paramiko
