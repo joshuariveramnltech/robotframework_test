@@ -1,2 +1,6 @@
 # Don't track content of these folders
 results/
+
+#Exclude these files
+debug.log
+
