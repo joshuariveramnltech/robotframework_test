@@ -1,4 +1,4 @@
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Robot-framework-logo.png/250px-Robot-framework-logo.png)
+![alt text](https://avatars2.githubusercontent.com/u/574284?s=200&v=4)
 ## Robot Framework Install Documentation
 ---
 #### Linux users should have Python 3 built-in. 
