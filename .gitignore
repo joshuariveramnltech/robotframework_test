@@ -1,5 +1,7 @@
-# Don't track content of these folders
-results/
+# Exclude the produced results
+results/*.png
+results/*.html
+results/*.xml
 
 #Exclude these files
 debug.log
