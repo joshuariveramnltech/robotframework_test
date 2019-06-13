@@ -1,7 +1,7 @@
 # Exclude the produced results
-results/*.png
-results/*.html
-results/*.xml
+*.png
+*.html
+*.xml
 
 #Exclude these files
 debug.log
