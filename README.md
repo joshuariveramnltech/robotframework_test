@@ -34,8 +34,9 @@ After cloning this repository, open the cloned repository in your terminal(cmd/p
 3.  `pip3` should be installed now, to verify, run the command below. `pip3 --version`
 
 **Windows:**
-1. Run the command `python -m pip install -U pip`.
-2. Check if the pip installation is successful. `pip -V`
+1. Download get-pip.py using curl `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py`
+2. Run the command `python get-pip.py`.
+3. Check if the pip installation is successful. `pip -V`
 
 When `pip` is successfully installed. Installing the dependencies should now be easily accomplished. Run this command on the root directory of this cloned repository. 
 
