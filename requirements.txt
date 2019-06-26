@@ -3,7 +3,7 @@ jsonpath
 paramiko
 requests
 robotframework
-robotframework-selenium2library
+robotframework-seleniumlibrary
 robotframework-sshlibrary
 selenium
 psutil
