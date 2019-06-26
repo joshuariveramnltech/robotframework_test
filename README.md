@@ -34,7 +34,7 @@ After cloning this repository, open the cloned repository in your terminal(cmd/p
 3.  `pip3` should be installed now, to verify, run the command below. `pip3 --version`
 
 **Windows:**
-1. Run the command `python get-pip.py`.
+1. Run the command `python -m pip install -U pip`.
 2. Check if the pip installation is successful. `pip -V`
 
 When `pip` is successfully installed. Installing the dependencies should now be easily accomplished. Run this command on the root directory of this cloned repository. 
@@ -64,6 +64,7 @@ After Downloading the latest webdriver for your browser, add the webdriver file 
 
 ---
 **Running your first robotframework test**
+
 After all that installation, it is now time to run your first test. 
 Go to the root of the cloned repository, open a terminal and run this command, `robot helloworld.robot`, and watch what happens.
 
