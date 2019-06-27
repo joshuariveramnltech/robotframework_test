@@ -69,8 +69,89 @@ After Downloading the latest webdriver for your browser, add the webdriver file 
 After all that installation, it is now time to run your first test. 
 Go to the root of the cloned repository, open a terminal and run this command, `robot helloworld.robot`, and watch what happens.
 
-Ok, so what happened there? helloworld.robot is a simple test that prints the word "Hello World!" to your console. Other than that it does nothing. Now, after you ran the command, you may notice that the root directory is cluttered, new files has been created. These files contain the logs,problems encountered, and the overall report of what happened on the test you just ran. Try opening it and see.
+Ok, so what happened there? helloworld.robot is a simple test that prints the word "Hello World!" to your console. Other than that it does nothing. _Below is the script inside the helloworld.robot file._ 
 
-A lot can be done with robotframework and SeleniumLIbrary working hand-in-hand. There are too much Keywords if I explain each and everything, so if you want, you can do so by reading robotframework's own documentation [here.](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+```robotframework
+*** Setting ***
+Documentation               This is a simple example robot test that prints the word Hello World to the console.
+Library                     SeleniumLibrary
 
-Some example with structure can be found inside the structured_setup folder in this repository.
+
+*** Variables ***
+# Variables Section.
+${message}                  \nHello World!     							
+
+
+*** Keywords ***
+# Keywords Section.
+Print Sample Message																
+    Log to Console          ${message} 									
+    
+
+*** Test Cases ***
+# Test cases Section.
+Print Hello World
+    [Documentation]         This prints hello world text on the console.			
+    [Tags]                  hello-world-message																			
+    Print Sample Message																
+```
+
+Now, after you ran the command, you may notice that the root directory is cluttered, new files has been created. These files contain the logs,problems encountered, and the overall report of what happened on the test you just ran. Try opening log.html or report.html and see.
+
+A lot can be done with robotframework and [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary/) working hand-in-hand. There are too much Keywords if I explain each and everything, so if you want, you can do so by reading robotframework's own documentation [here.](http://robotframework.org/SeleniumLibrary/SeleniumLibrary.html)
+
+
+---
+**Opening a Website to a URL**
+
+The main goal of selenium of course is web automation. Web Automation using the [SeleniumLibrary](https://github.com/robotframework/SeleniumLibrary/) in robotframework cannot be more easy. Below is an example script that opens a browser to url, then closes the browser.
+
+You can run this test by navigating to the root directory of this repository, open up a terminal and run `robot example.robot` see what happens. _Below is the contents os the example.robot_
+
+```robotframework
+***Settings***
+Documentation                                       This robot script opens your browser to a specified url and then close it after.
+Library                                             SeleniumLibrary
+
+
+***Variables***
+${website_url}                                      https://robotframework.org/
+
+
+***Keywords***
+Open the Test Browser to the url
+    Open Browser                                    ${website_url}                  chrome
+    #Selenium may be too fast sometimes that the user cannot even see what is happening.
+    Sleep                                           5s
+    Close all Browsers
+
+
+***Test Cases***
+Test Case One
+    Open the Test Browser to the url
+```
+
+Ok, again, what happened there? The script recognized the keyword `Open Browser` that is a pre-defined Keyword in the SeleniumLibrary and open the specified browser in the specified url which is https://robotframework.org/ and Chrome browser. Here in this script, I have decided to implement the `Sleep` Keyword, it acts as a delay which can be really helpful sometimes, you'll know soon enough.
+
+
+
+---
+**Conclusion**
+
+This guide pretty much covers the basics of using SeleniumLibrary in robotframework. I mean, the hardest part of it is the installation maybe, other than that, running tests cannot be more easy. 
+
+
+---
+**_Advanced Implementations_**
+
+
+_Test Structure_
+
+Some example with how test suites can be structured can be found inside the **structured_setup** and **simple_setup** folder in this repository. I've initialized each with their own README.md.
+
+
+_Creating your own log files_
+
+You're not probably going to need to, for robotframework creates it own log and report out of the box , but in the case that you need to log some text to a file then try following the guide i created.
+
+
