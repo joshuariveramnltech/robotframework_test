@@ -20,7 +20,9 @@ For more information about [robotframework](https://robotframework.org/) and its
 ---
 **Setup/Installation**
 
-Before starting your setup, it is important to note that this project will need git, so it is necessary to install it on your machine. 
+Before starting your setup, it is important to note that if you want to follow along all the tutorials below you will need Git, so it is necessary to install it on your machine. 
+
+But if you wish to just follow the setup/installation of robot framework for your machine, you do not need to install Git.
 
 **Windows**
 1. Downloading git on windows is simple, you can simply just download its setup.exe file [here](https://git-scm.com/)
