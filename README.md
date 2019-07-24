@@ -20,6 +20,20 @@ For more information about [robotframework](https://robotframework.org/) and its
 ---
 **Setup/Installation**
 
+Before starting your setup, it is important to note that this project will need git, so it is necessary to install it on your machine. 
+
+**Windows**
+1. Downloading git on windows is simple, you can simply just download its setup.exe file [here](https://git-scm.com/)
+2. After downloading its setup, just install it just like any windows setup.exe file.
+3. That is all you need to do to install git on your machine.
+
+
+**Linux**
+1. Git can easily be installed on your Linux machine via terminal.
+2. Update your package lists by running this command `sudo apt-get update`
+3. Now, we are ready to install git on your machine,`sudo apt-get install git`
+4. That's it, to verify your installation, simply run this command `git --version`
+
 This repository contains a very basic sample of how to implement a robotframework test library using [**SeleniumLibrary**](https://github.com/robotframework/SeleniumLibrary/). 
 
 First of all, since we are going to use robotframework backed with Python 3, having one installed on your machine is nescessary. Linux Users should have Python installed out of the box,to check existing python installation, run this command, `python3 --version`, Windows users could run `python --version` on their command line to verify if python is already installed in their machine. The latest stable release could be found [here.](https://www.python.org/downloads/)
